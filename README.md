@@ -13,9 +13,12 @@ Supported versions: 1.2 and 1.3.
 ### Building
 
 ```bash
-make
+git clone https://github.com/fuze/proxysql_exporter.git
+docker run -it -v $(pwd)/proxysql_exporter:/proxysql_exporter golang:1.13 /bin/bash
+cd /proxysql_exporter
+go get github.com/percona/proxysql_exporter
+make build
 ```
-
 
 ### Running
 
